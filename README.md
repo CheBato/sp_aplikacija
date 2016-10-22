@@ -16,3 +16,5 @@ Ciljna publika projekta so študentje, profesorji in asistenti na fakulteti.
 ##**Podprtost aplikacije**
 Aplikacija bo podprta na vseh napravah razen mini browserjev.
 
+##**Uporabljene tehnike**
+Trenutno planirane tehnike so **html**,**CSS** in **javascript**. Seznam tehnik se bo tudi s časom povečal.
