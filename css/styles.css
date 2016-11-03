@@ -1,0 +1,156 @@
+/* **index.html** */
+
+/*header*/
+#spodnjaCrta{
+	
+	border-bottom: 2px;
+	border-bottom-width: 2px; 
+	border-bottom-style:groove;
+	width:100%;
+	
+}
+#div_za_header{
+	width: 100%;
+	height: 70px;
+	margin-top: 10px;
+}
+#div_za_logo{
+	width:20%;
+	height: 99%;
+	float: left;
+}
+#stil_za_logo{
+	float: left;
+	margin-right: 350px;
+	margin-top: 35px;
+}
+#div_za_title{
+	float: left;
+	width: 62%;
+	height: 99%;
+}
+#title{
+	margin-top: 35px;
+}
+#div_za_prijavo{
+	float: left;
+	width: 18%;
+	height: 99%;
+}
+#prijava{
+	float: right;
+	margin-top: 45px;
+	width: 50px;
+	font-size: 17px;
+}
+/*konec header*/
+
+/*telo*/
+#div_za_celo_telo{
+	border-color: black;
+	border-style: groove;
+	color: black;
+	width: 100%;
+	height: 900px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+/*left panel*/
+#border_left_panel{
+	border-style: groove;
+	width: 25%;
+	height: 900px;
+	float: left;
+}
+#panel_za_navigacijo{
+	border-style: groove;
+	width: 70%;
+	height: 300px;
+	margin-top: 40px;
+}
+#panel_za_listo{
+		width: 100%;
+		height: 50%;
+		margin-top: 10px;
+		float: left;
+}
+ul {
+	float: left;
+}
+#panel_za_linke{
+	border-style: groove;
+	width: 70%;
+	height: 60px;
+	margin-top: 30px;
+}
+#border_za_nastavitve{
+	border-style: groove;
+	width: 70%;
+	height: 250px;
+	margin-top: 30px;
+}
+#border_za_nast_funkcije{
+	border-style: groove;
+	width: 70%;
+	height: 100px;
+	margin-top: 30px;
+	overflow: auto;
+}
+
+/* sredinski panel*/
+#sredinski_border{
+	border-style: groove;
+	width: 50%;
+	height: 900px;
+	float: left;
+}
+#input_za_search{
+	margin-top: 80px;
+}
+#sredinski_panel_za_predmete{
+	border-style: groove;
+	width: 70%;
+	height: 700px;
+	margin-top: 10px;
+}
+
+/* desni panel*/
+#desni_border{
+	border-style: groove;
+	width: 23.5%;
+	height: 900px;
+	float: left;
+}
+/*TODO tukaj pride za koledar*/
+
+#forum_border{
+	margin-top: 30px;
+}
+#slika_za_forum{
+	border-style: groove;
+	width: 70%;
+	height: 60px;
+	margin-top: 10px;
+}
+#FRI_border{
+	border-style: groove;
+	width:70%;
+	height: 20%;
+	margin-top: 30px;
+}
+
+/*konec telo*/
+
+/*footer*/
+#zgornjaCrta{
+	border-top: 2px;
+	border-top-width: 2px;
+	border-top-style:groove;
+	width: 100%;
+}
+#spodnji_bar{
+	margin-left: 10px;
+}
+/*konec footer*/
+
+/* **login** */

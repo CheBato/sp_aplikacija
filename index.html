@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 <title>Page Title</title>
 </head>
 
 <body>
 	<!-- header -->
 	<header>
-		<div style='border-bottom: 2px;border-bottom-width: 2px; border-bottom-style:groove;width:100%'>
-			<div style='width:100%;height: 70px; margin-top: 10px'>
-				<div style='width:20%;height: 99%; float: left;'>
-					<h1 style='float: left;margin-right: 350px;margin-top: 35px;'>SLIKA</h1>
+		<div id="spodnjaCrta">
+			<div id="div_za_header">
+				<div id="div_za_logo">
+					<h1 id="stil_za_logo">SLIKA</h1>
 				</div>
-				<div style='float: left;width:62%;height: 99%;'>
-					<center><h1 style="margin-top: 35px;">SPLETNA UCILNICA</h1></center>
+				<div id="div_za_title">
+					<center><h1 id="title">SPLETNA UCILNICA</h1></center>
 				</div>
-				<div style='float: left;width:18%;height: 99%;'>
-					<label style="float: right; margin-top:45px; width:50px;font-size:17px;"><a href="login.html">Prijava</a></label>
+				<div id="div_za_prijavo">
+					<label id="prijava"><a href="login.html">Prijava</a></label>
 				</div>
 			
 			</div>
@@ -24,16 +25,25 @@
 	</header>
 
 	
-	<div style='border-color: black; border-style:groove; color:black;width:100%; height: 900px;margin-top:30px;margin-bottom:30px;'>
+	<div id="div_za_celo_telo">
 	<!-- left panel -->
-		<div style='border-style:groove;width:25%;height: 900px;float: left;'>
+		<div id="border_left_panel">
 			<center>
+			<div id="panel_za_navigacijo">
 			<h3>Navigacija</h3>
-			<div style='border-style:groove;width:70%;height: 300px; margin-top: 10px'></div>
-			<div style='border-style:groove;width:70%;height: 60px; margin-top: 30px'><h3>Link do ocen</h3></div>
-			<a href="https://studij.fri.uni-lj.si"><div style='border-style:groove;width:70%;height: 60px; margin-top: 30px'><h3>Link do studisa</h3></div></a>
-			<div style='border-style:groove;width:70%;height: 250px; margin-top: 30px'><h3>Nastavitve</h3>
-			<div style='border-style:groove;width:70%;height: 100px; margin-top: 30px;overflow: auto'>
+			<div id="spodnjaCrta"></div>
+			<div id="panel_za_listo">
+			<ul>
+				<li><a href="index.html">Prva stran</a></li>
+				<li><a href="index.html">Smeri</a></li>
+			</ul>
+			</div>
+			</div>
+			<div id="panel_za_linke"><h3>Link do ocen</h3></div>
+			<a href="https://studij.fri.uni-lj.si"><div id="panel_za_linke"><h3>Link do studisa</h3></div></a>
+			<div id="border_za_nastavitve"><h3>Nastavitve</h3>
+			<div id="spodnjaCrta"></div>
+			<div id="border_za_nast_funkcije">
 			<h5>Funkcija 1</h5>
 			<h5>Funkcija 2</h5>
 			<h5>Funkcija 3</h5>
@@ -42,15 +52,15 @@
 			
 		</div>
 		<!-- sredinski panel -->
-		<div style='border-style:groove;width:50%;height: 900px;float: left; '>
+		<div id="sredinski_border">
 			<center>
-				<input type="text" name="search" placeholder="Search.." style="margin-top: 80px;">
-				<div style='border-style:groove;width:70%;height: 700px; margin-top: 10px'></div>
+				<input type="text" name="search" placeholder="Search.." id="input_za_search">
+				<div id="sredinski_panel_za_predmete"></div>
 			</center>
 		</div>
 		<!-- desni panel -->
 		<center>
-			<div style='border-style:groove;width:23.5%;height: 900px;float: left; '>
+			<div id="desni_border">
 			<h3>Koledar</h3>
 			<table class="datepicker">
 				
@@ -113,9 +123,9 @@
 				  </tr>
 				</tbody>
 			</table>
-			<h3 style='margin-top: 30px'>Forum</h3>
-			<div style='border-style:groove;width:70%;height: 60px; margin-top: 10px'></div>
-			<a href="https://www.fri.uni-lj.si/"><div style='border-style:groove;width:70%;height: 20%; margin-top: 30px'><h3>FRI/slika</h3></div></a>
+			<h3 id="forum_border">Forum</h3>
+			<div id="slika_za_forum"></div>
+			<a href="https://www.fri.uni-lj.si/"><div id="FRI_border"><h3>FRI/slika</h3></div></a>
 		</div>
 		</center>
 		
@@ -124,8 +134,8 @@
 	<!-- footer -->
 	<footer>
 		<div>
-		<div style='border-top: 2px;border-top-width: 2px; border-top-style:groove;width:100%'>
-			<center><h3 style="margin-left:30px;">Home | Studis | FRI | Forum</h3></center>
+		<div id="zgornjaCrta">
+			<center><h3 id="spodnji_bar"><a href="index.html">Home</a> | <a href="index.html">Studis</a> | <a href="index.html">FRI</a> | <a href="index.html">Forum</a></h3></center>
 		</div>
 		</div>
 	</footer>
