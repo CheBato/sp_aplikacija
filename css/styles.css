@@ -47,19 +47,15 @@
 
 /*telo*/
 #div_za_celo_telo{
-	border-color: black;
-	border-style: groove;
-	color: black;
 	width: 100%;
-	height: 900px;
+	height: 800px;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
 /*left panel*/
 #border_left_panel{
-	border-style: groove;
 	width: 25%;
-	height: 900px;
+	height: 800px;
 	float: left;
 }
 #panel_za_navigacijo{
@@ -99,36 +95,45 @@ ul {
 
 /* sredinski panel*/
 #sredinski_border{
-	border-style: groove;
+	
 	width: 50%;
-	height: 900px;
+	height: 800px;
 	float: left;
+	
 }
 #input_za_search{
-	margin-top: 80px;
+	margin-top: 5px;
 }
 #sredinski_panel_za_predmete{
 	border-style: groove;
 	width: 70%;
-	height: 700px;
+	height: 780px;
 	margin-top: 10px;
 }
 
 /* desni panel*/
 #desni_border{
-	border-style: groove;
 	width: 23.5%;
-	height: 900px;
+	height: 800px;
 	float: left;
 }
-/*TODO tukaj pride za koledar*/
-
-#forum_border{
-	margin-top: 30px;
-}
-#slika_za_forum{
+#panel_za_koledar{
 	border-style: groove;
 	width: 70%;
+	height: 210px;
+	margin-top: 40px;
+}
+/*TODO tukaj pride za koledar*/
+#forum_border{
+	border-style: groove;
+	width: 70%;
+	height: 150px;
+	margin-top: 10px;
+}
+
+#slika_za_forum{
+	border-style: groove;
+	width: 80%;
 	height: 60px;
 	margin-top: 10px;
 }
@@ -153,4 +158,89 @@ ul {
 }
 /*konec footer*/
 
+/* **konec index.html** */
+
 /* **login** */
+#panel_za_login{
+	width: 100%;
+	height: 500px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#skriti_border_left{
+	width: 25%;
+	height: 500px;
+	float: left;
+}
+#osrednji_skriti_border{
+	width: 50%;
+	height: 500px;
+	float: left;
+}
+#login_label{
+	font-size: 200%;
+	margin-top: 150px;
+}
+#username{
+	margin-right: 80px;
+}
+#password{
+	margin-right: 77px;
+}
+#username_password_input{
+	margin-left: 5px;
+}
+#login_button{
+	height: 30px;
+	width: 100px;
+}
+/* **konec login** */
+
+/* **predmet.html** */
+
+#div_za_celo_telo_predmet{
+	width: 100%;
+	height: 700px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+/*left panel*/
+
+#panel_za_opisPredmeta{
+	border-style: groove;
+	width: 70%;
+	height: 360px;
+	margin-top: 40px;
+}
+/*sredinski panel*/
+
+#obveznosti{
+	font-size: 150%;
+	text-decoration: underline;
+}
+#panel_za_obveznosti{
+	border-style: groove;
+	width: 90%;
+	height: 300px;
+}
+#panel_za_obveznosti2{
+	width: 90%;
+	height: 200px;
+}
+#sredinski_panel_za_predmete_dva{
+	
+	width: 70%;
+	height: 650px;
+	margin-top: 40px;
+}
+#ime_predmeta{
+	margin-top: 60px;
+}
+/*desni panel*/
+
+#panel_za_koledar_predmet{
+	border-style: groove;
+	width: 70%;
+	height: 210px;
+	margin-top: 10px;
+}
