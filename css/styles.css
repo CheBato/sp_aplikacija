@@ -54,6 +54,7 @@
 }
 /*left panel*/
 #border_left_panel{
+	
 	width: 25%;
 	height: 800px;
 	float: left;
@@ -113,7 +114,7 @@ ul {
 
 /* desni panel*/
 #desni_border{
-	width: 23.5%;
+	width: 23.3%;
 	height: 800px;
 	float: left;
 }
@@ -243,4 +244,148 @@ ul {
 	width: 70%;
 	height: 210px;
 	margin-top: 10px;
+}
+/* **konec predmet** */
+
+/* **nastavitve** */
+
+/*telo*/
+#div_za_celo_telo_nastavitve{
+	
+	width: 100%;
+	height: 850px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#nastavitve_title{
+	margin-right:280px;
+	font-size: 30px;
+}
+/*levi panel*/
+
+#div_za_nastavitve{
+	border-style: groove;
+	width: 70%;
+	height: 300px;
+	margin-left: 45px;
+	margin-top: 40px;
+}
+#profesorji{
+	color:blue;
+}
+#studentski_svet{
+	color:red;
+}
+
+#panel_za_navigacijo_nastavitve{
+	border-style:groove;
+	width: 70%;
+	height: 300px;
+	margin-top: 40px;
+	margin-left: 45px;
+}
+/*sredina*/
+#splosno_nastavitve{
+	margin-top:50px;
+	margin-bottom: -1px;
+	font-size: 20px;
+}
+#sredinski_border_nastavitve{
+	
+	width: 74%;
+	height: 850px;
+	float: left;
+}
+#osrednja_delitev_left{
+	
+	width: 40%;
+	height: 330px;
+	float:left;
+}
+#osrednja_delitev_mid{
+	
+	float:left;
+	width:30%;
+	height:330px;
+}
+#osrednja_delitev_right{
+	
+	width: 23%;
+	height: 330px;
+	float:left;
+}
+/*Splosno*/
+
+#panel_za_splosno{
+	float:right;
+	
+	width: 40%;
+	height: 330px;
+}
+
+#prazen_space{
+	float:right;
+	margin-top:20px;
+	width:100px;
+	border-style:groove;
+	height: 20px;
+	visibility:hidden;
+}
+#ostale{
+	float:right;
+	font-size:130%;
+	margin-top:20px;
+	font-weight:bold;
+}
+#splosno_inputi{
+	float:left;
+	margin-top:19.5px;
+	margin-left:10px;
+	width:90%;
+	height:20px;
+	
+}
+
+/* slika uporabnika */
+#trenutna_slika{
+	float:right;
+	font-size:130%;
+	margin-top:20px;
+	font-weight:bold;
+}
+#nova_slika{
+	float:right;
+	font-size:130%;
+	margin-top:110px;
+	font-weight:bold;
+}
+#osrednja_delitev_slika_uporabnika{
+	
+	float:left;
+	width:50%;
+	height:330px;
+}
+#tre_slika{
+	margin-top:30px;
+	border-style: groove;
+	width: 90px;
+	margin-left: 30px;
+	height: 90px;
+}
+
+#splosno_inputi_slika{
+	float:left;
+	margin-top:33px;
+	margin-left:30px;
+	width:70%;
+	height:20px;
+	
+}
+#tre_slika_predogled{
+	float:left;
+	border-style: groove;
+	width: 90px;
+	margin-left: 30px;
+	height: 90px;
+	margin-top: 30px;
 }
