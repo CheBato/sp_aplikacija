@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Predmeti</title>
+</head>
+
+<body>
+<script type='text/javascript'>
+    function expand(id) {
+		var lastChar = id.substr(id.length - 1); // => "1"
+		var predmet = "predmet";
+		var exp = predmet.concat(lastChar);
+		var box = document.getElementById(exp);
+		
+		box.style.height = "35%";
+		var func = document.getElementById(id).setAttribute("onClick", "javascript: restart(this.id);");
+    }
+	function restart(id){
+		var lastChar = id.substr(id.length - 1); // => "1"
+		var predmet = "predmet";
+		var exp = predmet.concat(lastChar);
+		var box = document.getElementById(exp);
+		box.style.height = "10%";
+		var func = document.getElementById(id).setAttribute("onClick", "javascript: expand(this.id);");
+	}
+	
+</script>
+	<!-- header -->
+	<header>
+		<div id="spodnjaCrta">
+			<div id="div_za_header">
+				<div id="div_za_logo">
+					<h1 id="stil_za_logo">SLIKA</h1>
+				</div>
+				<div id="div_za_title">
+					<center><h1 id="title">SPLETNA UCILNICA</h1></center>
+				</div>
+				<div id="div_za_prijavo">
+					<label id="prijava"><a href="login.html">Prijava</a></label>
+				</div>
+			
+			</div>
+		</div>
+	</header>
+
+	
+	<div id="div_za_celo_telo_predmeti">
+	<!-- left panel -->
+		<div id="border_left_panel_naloge">
+			<div id="notranji_left_panel">
+					<a href="index.html" title="Domov"><img src="ikone_spletna_ucilnica/home.png" height="40px" width="40px"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="koledar.html" title="Koledar"><img src="ikone_spletna_ucilnica/koledar.png" height="40px" width="40px"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="predmeti_neprijavljen.html" title="Studij"><img src="ikone_spletna_ucilnica/list_selected.png" height="40px" width="40px"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="login.html" title="Prijava"><img src="ikone_spletna_ucilnica/profil.png" height="40px" width="40px"></img></a>
+			</div>
+			
+		</div>
+		<!-- sredinski panel -->
+		<div id="sredinski_border_predmeti">
+			<div id="notranji_sredinski_border_predmeti">
+				<h2 id="title_predmeti">Študij</h2>
+				<div id="spodnjaCrta_predmeti"></div>
+				<div id="border_za_predmete">
+					<div id="border_za_predmete_left"></div>
+					<div id="border_za_predmete_sredina">
+						<div id="predmet1">
+							<a href="#PrvaStopnja" data-toggle="collapse" onclick="expand(this.id);" id="stopnja_1">Prva stopnja</a>
+							<div id="PrvaStopnja" class="panel-collapse collapse">
+								<ul id="prvaGroupa" class="list-group">
+									<li class="list-group-item">Letnik 1</li>
+									<li class="list-group-item">Letnik 2</li>
+									<li class="list-group-item">Letnik 3</li>
+								</ul>
+							</div>
+						</div>
+						<div id="predmet2"> 
+							<a href="#DrugaStopnja" data-toggle="collapse" onclick="expand(this.id);" id="stopnja_2">Druga stopnja</a>
+							<div id="DrugaStopnja" class="panel-collapse collapse">
+								<ul id="prvaGroupa" class="list-group">
+									<li class="list-group-item">Letnik 1</li>
+									<li class="list-group-item">Letnik 2</li>
+								</ul>
+							</div>
+						</div>
+						<div id="predmet3"> 
+							<a href="#TretjaStopnja" data-toggle="collapse" onclick="expand(this.id);" id="stopnja_3">Tretja stopnja</a>
+							<div id="TretjaStopnja" class="panel-collapse collapse">
+								<ul id="prvaGroupa" class="list-group">
+									<li class="list-group-item">Letnik 1</li>
+									<li class="list-group-item">Letnik 2</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				
+			</div>
+								
+				
+		</div>
+		
+		
+		
+	</div>
+		
+	</div>
+	
+	<!-- footer -->
+	<footer>
+		<div>
+		<div id="zgornjaCrta">
+			<center><h3 id="spodnji_bar"><a href="home_login.html">Home</a> | <a href="index.html">Studis</a> | <a href="index.html">FRI</a> | <a href="index.html">Forum</a></h3></center>
+		</div>
+		</div>
+	</footer>
+</body>
