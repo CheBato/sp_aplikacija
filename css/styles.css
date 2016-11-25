@@ -285,6 +285,11 @@
 	font-size: 20px;
 	margin-right:120px;
 }
+#uredi_gradivo1{
+	margin-top:10px;
+	font-size: 20px;
+	margin-right:120px;
+}
 #gradivo_left_panel{
 	
 	width:35%;
@@ -311,6 +316,29 @@
 	float:left;
 	margin-top:5px;
 	margin-left:10px;
+}
+#predavanje_dodaj{
+	display:none;
+	margin-top:30px;
+	margin-left:38px;
+}
+#dodaj{
+	display:none;
+	margin-top:10px;
+	margin-right:150px;
+	
+}
+#naloga_dodaj{
+	display:none;
+	margin-top:30px;
+	margin-left:38px;
+}
+#submit_naloga{
+	display:none;
+	margin-top:10px;
+	margin-right:150px;
+	
+	
 }
 #predavanje_ostalo{
 	font-size: 20px;
@@ -524,7 +552,7 @@
 
 #oddaja_naloge_block{
 	margin-top:60px;
-	
+	float:left;
 	width: 100%;
 	height: 30%;
 	

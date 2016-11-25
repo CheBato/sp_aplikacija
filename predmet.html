@@ -6,6 +6,48 @@
 </head>
 
 <body>
+<script>
+function dodaj_predavanje(){
+		document.getElementById("dodaj").style.display = "none";
+		document.getElementById("predavanje_dodaj").style.display = "none";
+		var w = window.alert("Uspesno ste dodali predavanje!");
+		this.target = 'Popup_Window';
+		
+}
+function dodaj_novo_nalogo(){
+		document.getElementById("naloga_dodaj").style.display = "none";
+		document.getElementById("submit_naloga").style.display = "none";
+		var w = window.alert("Uspesno ste dodali Nalogo!");
+		this.target = 'Popup_Window';
+		
+}
+function uredi_gradivo(){
+		document.getElementById("predavanje_dodaj").style.display = "block";
+		document.getElementById("dodaj").style.display = "block";
+		document.getElementById("uredi_gradivo").setAttribute("onClick", "javascript: hide(this.id);");
+}
+function uredi_naloge(){
+	
+		var visina = document.getElementById("div_za_celo_telo_predmet").clientHeight;
+		visina = visina + 100;
+		document.getElementById("div_za_celo_telo_predmet").style.height = visina +"px";
+		document.getElementById("naloga_dodaj").style.display = "block";
+		document.getElementById("submit_naloga").style.display = "block";
+		document.getElementById("uredi_gradivo1").setAttribute("onClick", "javascript: hide(this.id);");
+}
+function hide(id){
+	if(id == "uredi_gradivo"){
+		document.getElementById("dodaj").style.display = "none";
+		document.getElementById("predavanje_dodaj").style.display = "none";
+		document.getElementById("uredi_gradivo").setAttribute("onClick", "javascript: uredi_gradivo();");
+	}else{
+		document.getElementById("div_za_celo_telo_predmet").style.height = "1500px";
+		document.getElementById("naloga_dodaj").style.display = "none";
+		document.getElementById("submit_naloga").style.display = "none";
+		document.getElementById("uredi_gradivo1").setAttribute("onClick", "javascript: uredi_naloge();");
+	}
+}
+</script>
 	<!-- header -->
 	<header>
 		<div id="spodnjaCrta">
@@ -25,6 +67,7 @@
 		</div>
 	</header>
 
+	
 	
 	<div id="div_za_celo_telo_predmet">
 	<!-- left panel -->
@@ -92,7 +135,11 @@
 							</div>
 						</div>
 					</div>
-					<center><div id="uredi_gradivo">Uredi gradivo</div></center>
+					<center><a href="#rabimo" id="uredi_gradivo" onClick="uredi_gradivo();">Uredi gradivo</a></center>
+					<center><form name="subm" onsubmit="dodaj_predavanje();">
+						<input id="predavanje_dodaj" type="file" name="oddana_naloga" required="true"></input></br></br>
+						<input type="submit" name="oddaj_nalogo" id="dodaj" value="oddaj nalogo"></input>
+					</form></center>
 					<h2 id="opis_predmeta">NALOGE</h2> 
 					<div id="spodnjaCrta_predmet"></div>
 					<div id="border_za_opis_predmeta">
@@ -108,7 +155,11 @@
 							</div>
 						</div>
 					</div>
-					<center><div id="uredi_gradivo">Uredi naloge</div></center>
+					<center><a href="#rabimo" onClick="uredi_naloge();" id="uredi_gradivo1">Uredi naloge</a></center>
+					<center><form name="subm" onsubmit="dodaj_novo_nalogo();">
+						<input id="naloga_dodaj" type="file" name="oddana_naloga" required="true"></input></br></br>
+						<input type="submit" name="oddaj_nalogo" id="submit_naloga" value="oddaj nalogo"></input>
+					</form></center>
 				</div>
 				
 				
