@@ -1,5 +1,11 @@
 /* **index.html** */
+/* **General** */
 
+#homePng{
+	width: 40px;
+	height: 40px;
+
+}
 /*header*/
 #spodnjaCrta{
 	
@@ -31,18 +37,30 @@
 }
 #title{
 	margin-top: 35px;
-	margin-right: 70px;
+	margin-right: 40px;
 }
 #div_za_prijavo{
+	
 	float: left;
-	width: 18%;
+	width: 160px;
 	height: 99%;
+	margin-left:50px;
 }
 #prijava{
-	float: right;
+	cursor: pointer;
+	float: left;
 	margin-top: 45px;
-	width: 50px;
+	width: 110px;
 	font-size: 17px;
+	
+}
+#odjava{
+	cursor: pointer;
+	float:left;
+	margin-top:45px;
+	width: 30px;
+	font-size: 17px;
+	
 }
 /*konec header*/
 
@@ -61,7 +79,7 @@
 	float: left;
 }
 #notranji_left_panel{
-	border-style:groove;
+	
 	margin-top:100px;
 	width: 40%;
 	height: 300px;
@@ -181,8 +199,8 @@
 #password{
 	margin-right: 77px;
 }
-#username_password_input{
-	margin-left: 5px;
+.username_password{
+	margin-left:5px;
 }
 #login_button{
 	height: 30px;
@@ -313,7 +331,7 @@
 
 /*telo*/
 #div_za_celo_telo_nastavitve{
-	border-style:groove;
+	
 	width: 100%;
 	height: 850px;
 	margin-top: 30px;
@@ -334,17 +352,17 @@
 
 /*levi panel*/
 #border_left_panel_nastavitve{
-	border-style:groove;
+	
 	width: 15%;
 	height: 700px;
 	float: left;
 }
 #div_za_nastavitve{
-	border-style: groove;
+	border-style:groove;
 	width: 80%;
 	height: 300px;
-	margin-left:10px;
-	margin-top: 40px;
+	
+	margin-top: 50px;
 }
 #profesorji{
 	color:blue;
@@ -354,7 +372,7 @@
 }
 
 #panel_za_navigacijo_nastavitve{
-	border-style:groove;
+	
 	width: 24%;
 	height: 300px;
 	margin-top: 40px;
@@ -362,31 +380,32 @@
 }
 /*sredina*/
 #splosno_nastavitve_profil{
+	
 	margin-top:50px;
 	margin-bottom: -1px;
 	font-size: 30px;
 	color: #9ACD32;
 }
 #sredinski_border_nastavitve{
-	border-style:groove;
+	
 	width: 84%;
 	height: 850px;
 	float: left;
 }
 #osrednja_delitev_left{
-	border-style:groove;
+	
 	width: 30%;
 	height: 330px;
 	float:left;
 }
 #osrednja_delitev_mid{
-	border-style:groove;
+	
 	float:left;
 	width:32%;
 	height:330px;
 }
 #osrednja_delitev_right{
-	border-style: groove;
+	
 	width: 35%;
 	height: 330px;
 	float:left;
@@ -395,9 +414,9 @@
 
 #panel_za_splosno{
 	float:right;
-	border-style: groove;
+	
 	width: 50%;
-	height: 330px;
+	height: 350px;
 }
 
 #prazen_space{
@@ -414,13 +433,18 @@
 	margin-top:20px;
 	font-weight:bold;
 }
+#uredi_gumb{
+	float:left;
+	margin-top:19.5px;
+	margin-left:130px;
+}
 #splosno_inputi{
 	float:left;
 	margin-top:19.5px;
 	margin-left:10px;
 	width:90%;
 	height:20px;
-	
+	font-style: italic;
 }
 
 /* slika uporabnika */
@@ -434,13 +458,14 @@
 	float:right;
 	font-size:130%;
 	margin-top:110px;
+	margin-bottom:50px;
 	font-weight:bold;
 }
 #osrednja_delitev_slika_uporabnika{
-	border-style:groove;
+	
 	float:left;
 	width:40%;
-	height:330px;
+	height:350px;
 }
 #tre_slika{
 	margin-top:30px;
@@ -449,7 +474,10 @@
 	margin-left: 30px;
 	height: 90px;
 }
-
+#gumb{
+	margin-left:30px;
+	
+}
 #splosno_inputi_slika{
 	float:left;
 	margin-top:33px;
@@ -460,13 +488,16 @@
 }
 #tre_slika_predogled{
 	float:left;
-	border-style: groove;
+	
 	width: 90px;
 	margin-left: 30px;
 	height: 90px;
 	margin-top: 30px;
 }
-
+#predogled_slika{
+	width:90px;
+	height:90px;
+}
 /* **Naloga** */
 #nastavitve_title_naloge{
 	color: #4B0082;
@@ -511,6 +542,9 @@
 #oddaja_naloge{
 	float:left;
 	margin-left:30px;
+}
+#naloga{
+	margin-left: 150px;
 }
 #div_za_celo_telo_naloge{
 	width: 100%;
@@ -645,14 +679,14 @@
 	color: #4682B4;
 }
 #div_za_celo_telo_predmeti{
-	border-style:groove;
+	
 	width: 100%;
 	height: 800px;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
 #notranji_sredinski_border_predmeti{
-	border-style:groove;
+	
 	width:98%;
 	height:90%;
 	float:left;
@@ -666,85 +700,199 @@
 	margin-left:150px;
 }
 #border_za_predmete{
-	border-style:groove;
+	
 	margin-top: 30px;
 	height:80%;
 	
 }
 #border_za_predmete_left{
-	border-style:groove;
+	
 	width:20%;
 	height:100%;
 	float:left;
 }
 #border_za_predmete_sredina{
-	border-style:groove;
+	
 	width:75%;
 	height:100%;
 	float:left;
 }
-#predmeti_postavitev{
-	float:left;
-}
-
-#stopnja_1{
-	font-size: 30px;
-	margin-left: 20px;
-	float:left;
-	margin-top:5px;
+#border_za_smeri1{
+	
+	height:10%;
 	
 }
-
-#stopnja_2{
-	font-size: 30px;
-	margin-left: 20px;
+#border_za_smeri2{
+	
+	height:10%;
+}
+#border_za_letnike1{
+	display:none;
+	height:30px;
 	float:left;
-	margin-top:5px;
+	width:80%;
+	margin-top:10px;
+	margin-left:100px;
+}
+#border_za_letnike2{
+	display:none;
+	float:left;
+	
+	height:30px;
+	width:80%;
+	margin-top:10px;
+	margin-left:100px;
+}
+#border_za_letnike3{
+	display:none;
+	float:left;
+	
+	height:30px;
+	width:80%;
+	margin-top:10px;
+	margin-left:100px;
+}
+#border_za_letnike4{
+	display:none;
+	float:left;
+	height:30px;
+	width:80%;
+	margin-top:10px;
+	margin-left:100px;
+}
+#border_za_letnike5{
+	display:none;
+	float:left;
+	height:30px;
+	width:80%;
+	margin-top:10px;
+	margin-left:100px;
+}
+#border_za_letnike6{
+	display:none;
+	float:left;
+	height:30px;
+	width:80%;
+	margin-top:10px;
+	margin-left:100px;
+}
+#border_za_predmet{
+	float:left;
+	height:25px;
+	width:80%;
+	
+	margin-left:100px;
+}
+#tekst_smeri1{
+	margin-top:10px;
+	font-size: 35px;
+	color: #4682B4;
+	text-decoration: none;
+	float:left;
+}
+#tekst_smeri2{
+	margin-top:10px;
+	font-size: 35px;
+	color: #4682B4;
+	text-decoration: none;
+	float:left;
+}
+#tekst_letnik1{
+	display:none;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
+	float:left;
+}
+#tekst_letnik2{
+	display:none;
+	float:left;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
 	
 }
-
-#stopnja_3{
-	font-size: 30px;
-	margin-left: 20px;
+#tekst_letnik3{
+	display:none;
 	float:left;
-	margin-top:5px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
 	
 }
-#predmet1{
-	border-style:groove;
-	height:10%
-}
-#predmet2{
-	border-style:groove;
-	height:10%
-}
-#predmet3{
-	border-style:groove;
-	height:10%
-}
-#letnik1{
-	font-size: 20px;
-	margin-left: 20px;
+#tekst_letnik4{
+	display:none;
 	float:left;
-	margin-top:5px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
+	
 }
-#letnik2{
-	font-size: 20px;
-}
-#letnik3{
-	font-size: 20px;
-}
-#prvaGroupa{
+#tekst_letnik5{
+	display:none;
 	float:left;
-	margin-top: 50px;
-	width:50%
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
+	
 }
-#drugaGroupa{
+#tekst_letnik6{
+	display:none;
 	float:left;
-	width:50%;
-	margin-top: 10px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
+	
 }
-#dejanskiPredmet{
-	margin-left:20px;
+.smer1_prviLetnik{
+	margin-top:10px;
+	display:none;
+	float:left;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
 }
-
+.smer1_drugiLetnik{
+	margin-top:10px;
+	display:none;
+	float:left;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
+}
+.smer1_tretjiLetnik{
+	margin-top:10px;
+	display:none;
+	float:left;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
+}
+.smer2_prviLetnik{
+	margin-top:10px;
+	display:none;
+	float:left;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
+}
+.smer2_drugiLetnik{
+	margin-top:10px;
+	display:none;
+	float:left;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
+}
+.smer2_tretjiLetnik{
+	margin-top:10px;
+	display:none;
+	float:left;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4682B4;
+	
+}
+.pokazi{
+	display:block;
+}

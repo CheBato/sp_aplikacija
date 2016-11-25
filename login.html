@@ -36,14 +36,33 @@
 			<center>
 				<h1 id="login_label">PRIJAVA</h1>
 				<div id="spodnjaCrta_login"></div>
-				<h3 id="username">Username:<input type="text" name="user" id="username_password_input"></h3>
-				<h3 id="password">Password:<input type="password" name="password" id="username_password_input"></h3>
-				<a href="home_login.html"><button type="button" id="login_button">Login</button></a></br></br>
-				<a href="index.html">forgot your password?</a>
+				<form id="subm"type="POST">
+					<h3 id="username">Username:<input type="text" name="user" class="username_password" id="username_password_input" required="true"></h3>
+					<h3 id="password">Password:<input type="password" name="password" class="username_password" id="username_password_input2" required="true"></h3>
+					<input type="button" id="login_button" onClick="preveri_login();" value="Prijava"></input></br></br>
+					<a href="index.html">Pozabili geslo?</a>
+				</form>
 			</center>
 		</div>
 	</div>
-	
+	<script>
+		function preveri_login(){
+			var x = document.getElementById("username_password_input");
+			var y = document.getElementById("username_password_input2");
+			if(x.value == "Matevz"){
+				if(y.value == "password"){
+						window.location = "home_login.html";
+				}else{
+					var w = window.alert("nepravilno uporabnisko ime ali geslo!");
+					this.target = 'Popup_Window';
+				}
+			}else{
+				var w = window.alert("nepravilno uporabnisko ime ali geslo!");
+				this.target = 'Popup_Window';
+			}
+		}
+
+</script>
 	<!-- footer -->
 	<footer>
 		<div>

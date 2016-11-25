@@ -2,30 +2,122 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>Predmeti</title>
 </head>
 
 <body>
 <script type='text/javascript'>
-    function expand(id) {
-		var lastChar = id.substr(id.length - 1); // => "1"
-		var predmet = "predmet";
-		var exp = predmet.concat(lastChar);
-		var box = document.getElementById(exp);
+   function expandLetnik(id,valueChild){
+		document.getElementById(id).style.height="340px";
+		var visina = document.getElementById('div_za_celo_telo_predmeti').clientHeight;
 		
-		box.style.height = "45%";
-		var func = document.getElementById(id).setAttribute("onClick", "javascript: restart(this.id);");
+		visina = visina+300;
+		document.getElementById('div_za_celo_telo_predmeti').style.height = visina + "px";
+		document.getElementById(valueChild).setAttribute("onClick","javascript: restartLetnik(this.parentNode.id,this.id);");
+		//pokazemo predmete
+		if(id == "border_za_letnike1"){
+			var list = document.getElementsByClassName("smer1_prviLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}else if(id == "border_za_letnike2"){
+			var list = document.getElementsByClassName("smer1_drugiLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}else if(id == "border_za_letnike3"){
+			var list = document.getElementsByClassName("smer1_tretjiLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}else if(id == "border_za_letnike4"){
+			var list = document.getElementsByClassName("smer2_prviLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}else if(id == "border_za_letnike5"){
+			var list = document.getElementsByClassName("smer2_drugiLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}else if(id == "border_za_letnike6"){
+			var list = document.getElementsByClassName("smer2_tretjiLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}
+		
+	}function restartLetnik(id,valueChild){
+		document.getElementById(id).style.height="25px";
+		var visina = document.getElementById('div_za_celo_telo_predmeti').clientHeight;
+		visina = visina-300;
+		document.getElementById('div_za_celo_telo_predmeti').style.height = visina + "px";
+		document.getElementById(valueChild).setAttribute("onClick","javascript: expandLetnik(this.parentNode.id,this.id);");
+		//skrijemo predmete
+		if(id == "border_za_letnike1"){
+			var list = document.getElementsByClassName("smer1_prviLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}else if(id == "border_za_letnike2"){
+			var list = document.getElementsByClassName("smer1_drugiLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}else if(id == "border_za_letnike3"){
+			var list = document.getElementsByClassName("smer1_tretjiLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}else if(id == "border_za_letnike4"){
+			var list = document.getElementsByClassName("smer2_prviLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}else if(id == "border_za_letnike5"){
+			var list = document.getElementsByClassName("smer2_drugiLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}else if(id == "border_za_letnike6"){
+			var list = document.getElementsByClassName("smer2_tretjiLetnik");
+			for(var i = 0; i<list.length; i++){
+				list[i].classList.toggle("pokazi");
+			}
+		}
+	}
+    function expandSmer(id,valueChild) {
+	
+		document.getElementById(id).style.height="35%";
+		document.getElementById(valueChild).setAttribute("onClick", "javascript: restartSmer(this.parentNode.id,this.id);");
+		if(id == "border_za_smeri1"){
+			for(i = 1; i<4; i++){
+				document.getElementById("border_za_letnike"+i).style.display = "block";
+				document.getElementById("tekst_letnik"+i).style.display = "block";
+			}
+		}else{
+			for(i = 4; i<7; i++){
+				document.getElementById("border_za_letnike"+i).style.display = "block";
+				document.getElementById("tekst_letnik"+i).style.display = "block";
+			}
+		}
     }
-	function restart(id){
-		var lastChar = id.substr(id.length - 1); // => "1"
-		var predmet = "predmet";
-		var exp = predmet.concat(lastChar);
-		var box = document.getElementById(exp);
-		box.style.height = "10%";
-		var func = document.getElementById(id).setAttribute("onClick", "javascript: expand(this.id);");
+	function restartSmer(id,valueChild){
+		document.getElementById(id).style.height="10%";
+		var func = document.getElementById(valueChild).setAttribute("onClick", "javascript: expandSmer(this.parentNode.id,this.id);");
+		if(id == "border_za_smeri1"){
+			for(i = 1; i<4; i++){
+				document.getElementById("border_za_letnike"+i).style.display = "none";
+				document.getElementById("tekst_letnik"+i).style.display = "none";
+			}
+		}else{
+			for(i = 4; i<7; i++){
+				document.getElementById("border_za_letnike"+i).style.display = "none";
+				document.getElementById("tekst_letnik"+i).style.display = "none";
+			}
+		}
+		
+		
 	}
 	
 </script>
@@ -40,9 +132,9 @@
 					<center><h1 id="title">SPLETNA UCILNICA</h1></center>
 				</div>
 				<div id="div_za_prijavo">
-					<label id="prijava"><a href="login.html">Prijava</a></label>
+					<a href="nastavitve.html"><div id="prijava">Matevz Ogrinc</div></a>
+					<a href="index.html"><div id="odjava">(Odjava)</div></a>
 				</div>
-			
 			</div>
 		</div>
 	</header>
@@ -52,17 +144,17 @@
 	<!-- left panel -->
 		<div id="border_left_panel_naloge">
 			<div id="notranji_left_panel">
-					<a href="home_login.html" title="Domov"><img src="ikone_spletna_ucilnica/home.png" height="40px" width="40px"></img></a>
+					<a href="home_login.html"  title="Domov"><img id='homePng' src="ikone_spletna_ucilnica/home.png" height="40px" width="40px"></img></a>
 					<div id="spodnjaCrta"></div>
-					<a href="koledar.html" title="Koledar"><img src="ikone_spletna_ucilnica/koledar.png" height="40px" width="40px"></img></a>
+					<a href="koledar.html" title="Koledar"><img id="homePng" src="ikone_spletna_ucilnica/koledar.png" height="40px" width="40px"></img></a>
 					<div id="spodnjaCrta"></div>
-					<a href="predmeti.html" title="Predmeti"><img src="ikone_spletna_ucilnica/list_selected.png" height="40px" width="40px"></img></a>
+					<a href="predmeti.html" title="Predmeti"><img id="homePng" src="ikone_spletna_ucilnica/list_selected.png" height="40px" width="40px"></img></a>
 					<div id="spodnjaCrta"></div>
-					<a href="nastavitve.html" title="Profil"><img src="ikone_spletna_ucilnica/profil.png" height="40px" width="40px"></img></a>
+					<a href="nastavitve.html" title="Profil"><img id="homePng" src="ikone_spletna_ucilnica/profil.png" height="40px" width="40px"></img></a>
 					<div id="spodnjaCrta"></div>
-					<a href="naloge.html" title="Naloge"><img src="ikone_spletna_ucilnica/naloge.png" height="40px" width="40px"></img></a>
+					<a href="naloge.html" title="Naloge"><img id="homePng" src="ikone_spletna_ucilnica/naloge.png" height="40px" width="40px"></img></a>
 					<div id="spodnjaCrta"></div>
-					<a href="forum.html" title="Forum"><img src="ikone_spletna_ucilnica/forum.png" height="40px" width="40px"></img></a>
+					<a href="forum.html" title="Forum"><img id="homePng" src="ikone_spletna_ucilnica/forum.png" height="40px" width="40px"></img></a>
 			</div>
 			
 		</div>
@@ -74,32 +166,57 @@
 				<div id="border_za_predmete">
 					<div id="border_za_predmete_left"></div>
 					<div id="border_za_predmete_sredina">
-						<div id="predmet1">
-							<a href="#PrvaStopnja" data-toggle="collapse" onclick="expand(this.id);" id="stopnja_1">Prva stopnja</a>
-							<div id="PrvaStopnja" class="panel-collapse collapse">
-								<ul id="prvaGroupa" class="list-group">
-									<li class="list-group-item"><a href="#PrviLetnik" data-toggle="collapse" onclick="expand(this.id);" id="letnik_1">Letnik 1</a></li>
-										<div id="PrviLetnik" class="panel-collapse collapse">
-											<ul id="drugaGroupa"class="list-group">
-												<li id="dejanskiPredmet"class="list-group-item"><a href="predmet.html" >Predmet 1</a></li>
-											</ul><br/><br/><br/><br/>
-										</div>
-									<li class="list-group-item">Letnik 2</li>
-									<li class="list-group-item">Letnik 3</li>
-								</ul>
+						<div id="border_za_smeri1">
+							<a href="#smer1" id="tekst_smeri1" onClick="expandSmer(this.parentNode.id,this.id);">Smer 1</a>
+								<!-- collapse na Letnike-->
+								<div id="border_za_letnike1">
+									<a href="#letnik1" onClick="expandLetnik(this.parentNode.id,this.id);" id="tekst_letnik1">1 Letnik</a>
+									<!-- collapse na predmete 1-->
+									<div id="border_za_predmet">
+										<a href="predmet.html" class="smer1_prviLetnik">Predmet1</a>
+									</div>
+									<div id="border_za_predmet">
+										<a href="predmet.html" class="smer1_prviLetnik">Predmet2</a>
+									</div>
+									<div id="border_za_predmet">
+										<a href="predmet.html" class="smer1_prviLetnik">Predmet3</a>
+									</div>
+									<div id="border_za_predmet">
+										<a href="predmet.html" class="smer1_prviLetnik">Predmet4</a>
+									</div>
+									<div id="border_za_predmet">
+										<a href="predmet.html" class="smer1_prviLetnik">Predmet5</a>
+									</div>
+									<div id="border_za_predmet">
+										<a href="predmet.html" class="smer1_prviLetnik">Predmet6</a>
+									</div>
+									<div id="border_za_predmet">
+										<a href="predmet.html" class="smer1_prviLetnik">Predmet7</a>
+									</div>
+									<div id="border_za_predmet">
+										<a href="predmet.html" class="smer1_prviLetnik">Predmet8</a>
+									</div>
+									<div id="border_za_predmet">
+										<a href="predmet.html" class="smer1_prviLetnik">Predmet9</a>
+									</div>
+									<div id="border_za_predmet">
+										<a href="predmet.html" class="smer1_prviLetnik">Predmet10</a>
+									</div>
+								</div>
+								
 							</div>
 						</div>
 						
-					</div>
 				
-			</div>
+				
+				</div>
 								
 				
+			</div>
+		
+		
+		
 		</div>
-		
-		
-		
-	</div>
 		
 	</div>
 	

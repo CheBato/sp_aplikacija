@@ -6,6 +6,14 @@
 </head>
 
 <body>
+<script>
+function return_responce(){
+
+	var w = window.alert("uspesno ste oddali nalogo!");
+	this.target = 'Popup_Window';
+	
+}
+</script>
 	<!-- header -->
 	<header>
 		<div id="spodnjaCrta">
@@ -16,7 +24,10 @@
 				<div id="div_za_title">
 					<center><h1 id="title">SPLETNA UCILNICA</h1></center>
 				</div>
-				
+				<div id="div_za_prijavo">
+					<a href="nastavitve.html"><label id="prijava">Matevz Ogrinc</label></a>
+					<a href="index.html"><div id="odjava">(Odjava)</div></a>
+				</div>
 			
 			</div>
 		</div>
@@ -57,8 +68,12 @@
 			<div id="oddaja_naloge_levi">
 			</div>
 				<label id="oddaja_naloge_label">Oddaj nalogo</label>
-				<input id="oddaja_naloge" type="file" name="img"></input>
-			</div>
+				<form name="subm" onsubmit="return_responce();">
+					<input id="oddaja_naloge" type="file" name="oddana_naloga" required="true"></input></br></br>
+					<input type="submit" name="oddaj_nalogo" id="naloga" value="oddaj nalogo"></input>
+				</form>
+			</div><
+			
 		</div>
 	</div>
 	<footer>
