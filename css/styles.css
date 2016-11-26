@@ -73,7 +73,7 @@
 }
 /*left panel*/
 #border_left_panel{
-	border-style:groove;
+	
 	width: 10%;
 	height: 600px;
 	float: left;
@@ -127,7 +127,7 @@
 	background-color: #FF8C00;
 }
 
-/*TODO tukaj pride za koledar*/
+
 #forum_border{
 	border-style: groove;
 	width: 70%;
@@ -380,16 +380,21 @@
 
 /*levi panel*/
 #border_left_panel_nastavitve{
-	
 	width: 15%;
 	height: 700px;
+	float: left;
+}
+#notranji_left_panel_nastavitve{
+	margin-top:100px;
+	width: 25%;
+	height: 300px;
 	float: left;
 }
 #div_za_nastavitve{
 	border-style:groove;
 	width: 80%;
 	height: 300px;
-	
+	float:left;
 	margin-top: 50px;
 }
 #profesorji{
@@ -709,7 +714,7 @@
 #div_za_celo_telo_predmeti{
 	
 	width: 100%;
-	height: 800px;
+	height: 700px;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
@@ -923,4 +928,191 @@
 }
 .pokazi{
 	display:block;
+}
+/* koledar */
+#sredinski_border_koledar{
+	
+	width:88%;
+	height:90%;
+	float:left;
+	margin-top: 60px;
+}
+#div_za_celo_telo_koledar{
+	
+	width: 100%;
+	height: 700px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#title_koledar{
+	margin-top:40px;
+	margin-bottom: -1px;
+	font-size: 40px;
+	color: #FF8C00;
+}
+#spodnjaCrta_koledar{
+	border-bottom-width: 3px;
+	border-bottom-style:solid;
+	border-color: #FF8C00;
+	width:100%;	
+}
+#osrednji_border_koledar{
+	margin-top:30px;
+	width:100%;
+	height:60%;
+	
+}
+#osrednji_border_koledar_left{
+	width:20%;
+	height:100%;
+	
+	float:left;
+}
+#osrednji_border_koledar_sredina{
+	width:78%;
+	height:100%;
+	
+	float:left;
+	
+}
+#table_koledar{
+	margin-left:120px;
+	border-color:#FF8C00;
+	width:350px;
+}
+#radio_buttons{
+	float:left;
+	width:50%;
+	margin-left:235px;
+	
+}
+
+#goLeft{
+	width:30px;
+	float:left;
+	border-style:none;
+	background-color:white;
+	color:#FF8C00;
+	cursor: pointer;
+}
+#goRight{
+	float:right;
+	width:30px;
+	border-style:none;
+	background-color:white;
+	color:#FF8C00;
+	cursor: pointer;
+}
+
+td{
+	
+	
+	display: table-cell;
+	height:18px;
+}
+/* Ocene */
+#sredinski_border_ocene{
+	
+	
+	width: 89%;
+	height: 700px;
+	float: left;
+	
+}
+#notranji_sredinski_border_ocene{
+	
+	width:98%;
+	height:90%;
+	float:left;
+	margin-top: 60px;
+}
+#title_ocene{
+	margin-top:40px;
+	margin-bottom: -1px;
+	font-size: 40px;
+	color: #008B8B;
+	
+}
+#spodnjaCrta_ocene{
+	border-bottom-width: 3px;
+	border-bottom-style:solid;
+	border-color: #008B8B;
+	width:100%;	
+	float:left;
+}
+#sredinski_border_ocene_left{
+	
+	width:20%;
+	height:85%;
+	float:left;
+}
+#sredinski_border_ocene_mid{
+	margin-top:20px;
+	
+	float:left;
+	width:78.5%;
+	height:80%
+}
+#label_ocene_predmeti{
+	float:left;
+	font-size: 30px;
+	color:#008B8B;
+}
+
+.razsiri_border_predmeta_ocene{
+	
+	margin-left:70px;
+	margin-top:10px;
+	float:left;
+	width:90%;
+	height:270px;
+	
+}
+.border_za_predmete_ocene{
+	display:block;
+	
+	margin-left:70px;
+	margin-top:10px;
+	float:left;
+	width:90%;
+	height:30px;
+}
+#tekst_ocene_predmet{
+	float:left;
+	margin-top:5px;
+	font-size: 20px;
+	text-decoration: none;
+	color:#008B8B;
+
+}
+#labels{
+	float:left;
+	font-size:20px;
+	margin-left:40px;
+}
+#label_ime_naloge{
+	float:left;
+	font-size:20px;
+	
+}
+.tabele_ocene{
+	display:none;
+}
+.odkrij_tabele{
+	display:block;
+	margin-left:170px;
+	width:50%;
+}
+th{
+	text-align:center;
+	border-spacing:50px;
+	color:#008B8B;
+	border-bottom-style:solid;
+	border-bottom-color:#008B8B;
+}
+td{
+	
+	width:130px;
+	text-align:center;
+	border-bottom-style:groove;
 }

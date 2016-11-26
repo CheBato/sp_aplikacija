@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>Koledar</title>
+</head>
+
+<body>
+<script>
+function changeDate(id){
+	
+	var months =["Januar","Februar","Marec","April","Maj","Junij","Julij","Avgust","September","Oktober","November","December"];
+	var zacDan ={JanZ:6, JanSt:31, FebZ:2, FebSt:29, MarZ:3, MarSt:31, AprZ:6, AprSt:30, MajZ:1, MajSt:31, JunZ:4, JunSt:30, JulZ:6, JulSt:31, AvgZ:2, AvgSt:31, SepZ:5, SepSt:30, OktZ:7, OktSt:31, NovZ:3, NovSt:30, DecZ:5, DecSt:31};
+	var mesec = document.getElementById("month").innerHTML;
+	var drugiDel = mesec.split(" ");
+	
+	
+	var nov_mesec = "";
+	
+	
+	//spremenit mesec
+	
+	for(var i in months){
+		
+		if(months[i] == drugiDel[0]){
+			if(id == "goLeft"){
+				if(i == 0){
+					i = 11;
+					nov_mesec = months[i];
+				}else{
+					i--;
+					nov_mesec = months[i];
+				}
+			}else if(id == "goRight"){
+				if(i == 11){
+					i = 0;
+					nov_mesec = months[i];
+				}else{
+					i++;
+					nov_mesec = months[i];
+				}
+				
+			}
+			break;
+		}
+	}
+	nov_mesec = nov_mesec + " 2016";
+	document.getElementById("month").innerHTML = nov_mesec;
+	var prviDel = nov_mesec.substring(0,3);
+	
+	
+	var spr = prviDel + "Z";
+	var spr2 = prviDel + "St";
+	
+	
+	
+	var zacetniDan = zacDan[spr]
+	var stDnevov = zacDan[spr2];
+	
+	var j = 1;
+	var i = 1;
+	var zac = zacetniDan;
+	var check = 0;
+	while(i <= 42){
+		var dan = "day" + i;
+		if(i == zac){
+			check = 1;
+		}else if(j == stDnevov+1){
+			check = 0;
+		}
+		if(check == 1){
+			
+			document.getElementById(dan).innerHTML = j;
+			j++;
+		}else{
+			
+			document.getElementById(dan).innerHTML = "";
+			
+		}
+		i++;
+	}
+	
+	
+	
+	
+}
+
+
+
+</script>
+	<!-- header -->
+	<header>
+		<div id="spodnjaCrta">
+			<div id="div_za_header">
+				<div id="div_za_logo">
+					<h1 id="stil_za_logo">SLIKA</h1>
+				</div>
+				<div id="div_za_title">
+					<center><h1 id="title">SPLETNA UCILNICA</h1></center>
+				</div>
+				
+			</div>
+		</div>
+	</header>
+
+	
+	<div id="div_za_celo_telo_koledar">
+	<!-- left panel -->
+		<div id="border_left_panel_naloge">
+			<div id="notranji_left_panel">
+					<a href="index.html" title="Domov"><img src="ikone_spletna_ucilnica/home.png" height="40px" width="40px"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="koledar_neprijavljen.html" title="Koledar"><img src="ikone_spletna_ucilnica/koledar_selected.png" height="40px" width="40px"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="predmeti_neprijavljen.html" title="Studij"><img src="ikone_spletna_ucilnica/list.png" height="40px" width="40px"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="login.html" title="Prijava"><img src="ikone_spletna_ucilnica/profil.png" height="40px" width="40px"></img></a>
+			</div>
+			
+		</div>
+		<!-- sredinski panel -->
+		<div id="sredinski_border_koledar">
+			<h2 id="title_koledar">Koledar</h2>
+			<div id="spodnjaCrta_koledar"></div>
+			<div id="osrednji_border_koledar">
+				<div id="osrednji_border_koledar_left"></div>
+				<div id="osrednji_border_koledar_sredina">
+					<TABLE id="table_koledar"BORDER=4 CELLSPACING=4 CELLPADDING=4> 
+						<TR>
+							<TD COLSPAN="8" ALIGN=center><input type="button" id="goLeft" onClick="changeDate(this.id);" value="<"></input><B id="month">November 2016</B><input style="button"id="goRight" onClick="changeDate(this.id);" value=">"></input></TD> 
+						</TR>
+						<TR> 
+							<TD COLSPAN="8" ALIGN=center><I id="tekst_koledar">Studijsko Leto 2016</I></TD>
+						</TR>
+						<TR> 
+							<TD ALIGN=center>Ned</TD>
+							<TD ALIGN=center>Pon</TD>
+							<TD ALIGN=center>Tor</TD>
+							<TD ALIGN=center>Sre</TD>
+							<TD ALIGN=center>Cet</TD>
+							<TD ALIGN=center>Pet</TD>
+							<TD ALIGN=center>Sob</TD>
+						</TR>
+						<TR> 
+							<TD ALIGN=center id="day1"></TD>
+							<TD ALIGN=center id="day2"></TD>
+							<TD ALIGN=center id="day3">1</TD>
+							<TD ALIGN=center id="day4">2</TD>
+							<TD ALIGN=center id="day5">3</TD>
+							<TD ALIGN=center id="day6">4</TD>
+							<TD ALIGN=center id="day7">5</TD>
+						</TR>
+						<TR> 
+							<TD ALIGN=center id="day8">6</TD>
+							<TD ALIGN=center id="day9">7</TD>
+							<TD ALIGN=center id="day10">8</TD>
+							<TD ALIGN=center id="day11">9</TD>
+							<TD ALIGN=center id="day12">10</TD>
+							<TD ALIGN=center id="day13">11</TD>
+							<TD ALIGN=center id="day14">12</TD>
+						</TR>
+						<TR> 
+							<TD ALIGN=center id="day15">13</TD>
+							<TD ALIGN=center id="day16">14</TD>
+							<TD ALIGN=center id="day17">15</TD>
+							<TD ALIGN=center id="day18">16</TD>
+							<TD ALIGN=center id="day19">17</TD>
+							<TD ALIGN=center id="day20">18</TD>
+							<TD ALIGN=center id="day21">19</TD>
+						</TR>
+						<TR> 
+							<TD ALIGN=center id="day22">20</TD>
+							<TD ALIGN=center id="day23">21</TD>
+							<TD ALIGN=center id="day24">22</TD>
+							<TD ALIGN=center id="day25">23</TD>
+							<TD ALIGN=center id="day26">24</TD>
+							<TD ALIGN=center id="day27">25</TD>
+							<TD ALIGN=center id="day28">26</TD>
+						</TR>
+						<TR> 
+							<TD ALIGN=center id="day29">27</TD>
+							<TD ALIGN=center id="day30">28</TD>
+							<TD ALIGN=center id="day31">29</TD>
+							<TD ALIGN=center id="day32">30</TD>
+							<TD ALIGN=center id="day33"></TD>
+							<TD ALIGN=center id="day34"></TD>
+							<TD ALIGN=center id="day35"></TD>
+						</TR>
+						<TR> 
+							<TD ALIGN=center id="day36"></TD>
+							<TD ALIGN=center id="day37"></TD>
+							<TD ALIGN=center id="day38"></TD>
+							<TD ALIGN=center id="day39"></TD>
+							<TD ALIGN=center id="day40"></TD>
+							<TD ALIGN=center id="day41"></TD>
+							<TD ALIGN=center id="day42"></TD>
+
+						</TR>
+					</TABLE></br></br>
+					<div id="radio_buttons">
+						<form type="GET">
+							<input type="checkbox" name="studijski_dnevi" value="studij_dnevi" checked>Studijske datumi</br>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- footer -->
+	<footer>
+		<div>
+		<div id="zgornjaCrta">
+			<center><h3 id="spodnji_bar"><a href="home_login.html">Home</a> | <a href="https://studij.fri.uni-lj.si">Studis</a> | <a href="https://www.fri.uni-lj.si/">FRI</a> | <a href="forum.html">Forum</a></h3></center>
+		</div>
+		</div>
+	</footer>
+</body>

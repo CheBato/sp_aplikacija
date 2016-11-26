@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>Ocene</title>
+</head>
+
+<body>
+<script>
+	//funkcija za collapse
+	function expandSmer(idOtroka) {
+		
+		var test = idOtroka.split("html");
+		var hr = test[1];
+		var ele = document.querySelectorAll("a[href='"+hr+"']");
+		ele[0].parentNode.classList.remove("border_za_predmete_ocene");
+		ele[0].parentNode.classList.add("razsiri_border_predmeta_ocene");
+		ele[0].setAttribute("onClick","javascript: restartSmer(this.href);");
+		//povisamo size centralnega boxa
+		var visina = document.getElementById('sredinski_border_ocene').clientHeight;
+		
+		visina = visina+240;
+		document.getElementById('sredinski_border_ocene').style.height = visina + "px";
+		
+		
+		var sosed = ele[0].nextElementSibling;
+		while(sosed != null){
+			console.log(sosed.classList);
+			if(sosed.classList != undefined){
+				sosed.classList.remove("tabele_ocene");
+				sosed.classList.add("odkrij_tabele");
+			}
+			sosed = sosed.nextSibling;
+		}
+		
+    }
+	//funkcija za collapseRestart
+	function restartSmer(idOtroka){
+		var test = idOtroka.split("html");
+		var hr = test[1];
+		var ele = document.querySelectorAll("a[href='"+hr+"']");
+		ele[0].parentNode.classList.remove("razsiri_border_predmeta_ocene");
+		ele[0].parentNode.classList.add("border_za_predmete_ocene");
+		ele[0].setAttribute("onClick","javascript: expandSmer(this.href);");
+		//zmanjsamo size centralnega boxa
+		var visina = document.getElementById('sredinski_border_ocene').clientHeight;
+		
+		visina = visina-240;
+		document.getElementById('sredinski_border_ocene').style.height = visina + "px";
+		
+		
+		var sosed = ele[0].nextElementSibling;
+		while(sosed != null){
+			console.log(sosed.classList);
+			if(sosed.classList != undefined){
+				sosed.classList.remove("odkrij_tabele");
+				sosed.classList.add("tabele_ocene");
+			}
+			sosed = sosed.nextSibling;
+		}
+		
+	}
+</script>
+	<!-- header -->
+	<header>
+		<div id="spodnjaCrta">
+			<div id="div_za_header">
+				<div id="div_za_logo">
+					<h1 id="stil_za_logo">SLIKA</h1>
+				</div>
+				<div id="div_za_title">
+					<center><h1 id="title">SPLETNA UCILNICA</h1></center>
+				</div>
+				<div id="div_za_prijavo">
+					<a href="nastavitve.html"><div id="prijava">Matevz Ogrinc</div></a>
+					<a href="index.html"><div id="odjava">(Odjava)</div></a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	
+	<div id="div_za_celo_telo_predmeti">
+	<!-- left panel -->
+		<div id="border_left_panel_naloge">
+			<div id="notranji_left_panel">
+					<a href="home_login.html"  title="Domov"><img id='homePng' src="ikone_spletna_ucilnica/home.png"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="koledar.html" title="Koledar"><img id="homePng" src="ikone_spletna_ucilnica/koledar.png"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="predmeti.html" title="Predmeti"><img id="homePng" src="ikone_spletna_ucilnica/list.png"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="nastavitve.html" title="Profil"><img id="homePng" src="ikone_spletna_ucilnica/profil.png"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="naloge.html" title="Naloge"><img id="homePng" src="ikone_spletna_ucilnica/naloge.png"></img></a>
+					<div id="spodnjaCrta"></div>
+					<a href="ocene.html" title="ocene"><img id="homePng" src="ikone_spletna_ucilnica/ocene_selected.png"></img></a>
+			</div>
+		</div>
+		<!-- sredinski panel -->
+		<div id="sredinski_border_ocene">
+			<div id="notranji_sredinski_border_ocene">
+				<h2 id="title_ocene">Ocene</h2>
+				<div id="spodnjaCrta_ocene"></div>
+				<div id="sredinski_border_ocene_left"></div>
+				<div id="sredinski_border_ocene_mid">
+					<label id="label_ocene_predmeti">Predmeti:</label>
+					<div id="spodnjaCrta_ocene"></div>
+					<div class="border_za_predmete_ocene">
+						<a href="#predmet1" id="tekst_ocene_predmet" onClick="expandSmer(this.href);">Predmet1</a>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Ime Naloge/kviza</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Kolokvij</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Kolokvij1</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij2</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij3</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+					</div>
+					<div class="border_za_predmete_ocene">
+						<a href="#predmet2" id="tekst_ocene_predmet" onClick="expandSmer(this.href);">Predmet2</a>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Ime Naloge/kviza</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Kolokvij</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Kolokvij1</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij2</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij3</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+					</div>
+					<div class="border_za_predmete_ocene">
+						<a href="#predmet3" id="tekst_ocene_predmet" onClick="expandSmer(this.href);">Predmet3</a>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Ime Naloge/kviza</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Kolokvij</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Kolokvij1</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij2</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij3</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+					</div>
+					<div class="border_za_predmete_ocene">
+						<a href="#predmet4" id="tekst_ocene_predmet" onClick="expandSmer(this.href);">Predmet4</a>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Ime Naloge/kviza</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Kolokvij</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Kolokvij1</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij2</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij3</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+					</div>
+					<div class="border_za_predmete_ocene">
+						<a href="#predmet5" id="tekst_ocene_predmet" onClick="expandSmer(this.href);">Predmet5</a>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Ime Naloge/kviza</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Kolokvij</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Kolokvij1</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij2</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij3</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+					</div>
+					<div class="border_za_predmete_ocene">
+						<a href="#predmet6" id="tekst_ocene_predmet" onClick="expandSmer(this.href);">Predmet6</a>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Ime Naloge/kviza</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Kolokvij</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Kolokvij1</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij2</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij3</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+					</div>
+					<div class="border_za_predmete_ocene">
+						<a href="#predmet7" id="tekst_ocene_predmet" onClick="expandSmer(this.href);">Predmet7</a>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Ime Naloge/kviza</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Kolokvij</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Kolokvij1</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij2</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij3</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+					</div>
+					<div class="border_za_predmete_ocene">
+						<a href="#predmet8" id="tekst_ocene_predmet" onClick="expandSmer(this.href);">Predmet8</a>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Ime Naloge/kviza</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Kolokvij</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Kolokvij1</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij2</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij3</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+					</div>
+					<div class="border_za_predmete_ocene">
+						<a href="#predmet9" id="tekst_ocene_predmet" onClick="expandSmer(this.href);">Predmet9</a>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Ime Naloge/kviza</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Kolokvij</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Kolokvij1</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij2</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij3</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+					</div>
+					<div class="border_za_predmete_ocene">
+						<a href="#predmet10" id="tekst_ocene_predmet" onClick="expandSmer(this.href);">Predmet10</a>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Ime Naloge/kviza</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Naloga/Kviz</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+						<table class="tabele_ocene">
+						<tr>
+						    <th>Kolokvij</th>
+						    <th>Ocena</th> 
+						    <th>Procent</th>
+						  </tr>
+						  <tr>
+							<td>Kolokvij1</td>
+							<td>Ocena1</td>
+							<td>50</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij2</td>
+							<td>Ocena2</td>
+							<td>94</td>
+						  </tr>
+						  <tr>
+							<td>Kolokvij3</td>
+							<td>Ocena3</td>
+							<td>80</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+		
+		
+		
+		</div>
+		
+	</div>
+	
+	<!-- footer -->
+	<footer>
+		<div>
+		<div id="zgornjaCrta">
+			<center><h3 id="spodnji_bar"><a href="home_login.html">Home</a> | <a href="https://studij.fri.uni-lj.si">Studis</a> | <a href="https://www.fri.uni-lj.si/">FRI</a> | <a href="forum.html">Forum</a></h3></center>
+		</div>
+		</div>
+	</footer>
+</body>
