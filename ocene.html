@@ -5,7 +5,7 @@
 	<title>Ocene</title>
 </head>
 
-<body>
+<body class="wrapper">
 <script>
 	//funkcija za collapse
 	function expandSmer(idOtroka) {
@@ -21,7 +21,7 @@
 		
 		visina = visina+240;
 		document.getElementById('sredinski_border_ocene').style.height = visina + "px";
-		
+		document.getElementById('div_za_celo_telo_ocene').style.height = visina + "px";
 		
 		var sosed = ele[0].nextElementSibling;
 		while(sosed != null){
@@ -47,7 +47,7 @@
 		
 		visina = visina-240;
 		document.getElementById('sredinski_border_ocene').style.height = visina + "px";
-		
+		document.getElementById('div_za_celo_telo_ocene').style.height = visina + "px";
 		
 		var sosed = ele[0].nextElementSibling;
 		while(sosed != null){
@@ -62,9 +62,9 @@
 	}
 </script>
 	<!-- header -->
-	<header>
+	<header class="header">
 		<div id="spodnjaCrta">
-			<div id="div_za_header">
+			<div class="firstItem" id="div_za_header">
 				<div id="div_za_logo">
 					<h1 id="stil_za_logo">SLIKA</h1>
 				</div>
@@ -80,9 +80,9 @@
 	</header>
 
 	
-	<div id="div_za_celo_telo_predmeti">
+	<div id="div_za_celo_telo_ocene" class="container">
 	<!-- left panel -->
-		<div id="border_left_panel_naloge">
+		<aside class="aside" id="border_left_panel_naloge">
 			<div id="notranji_left_panel">
 					<a href="home_login.html"  title="Domov"><img id='homePng' src="ikone_spletna_ucilnica/home.png"></img></a>
 					<div id="spodnjaCrta"></div>
@@ -96,14 +96,14 @@
 					<div id="spodnjaCrta"></div>
 					<a href="ocene.html" title="ocene"><img id="homePng" src="ikone_spletna_ucilnica/ocene_selected.png"></img></a>
 			</div>
-		</div>
+		</aside>
 		<!-- sredinski panel -->
-		<div id="sredinski_border_ocene">
+		<div id="sredinski_border_ocene" class="main">
 			<div id="notranji_sredinski_border_ocene">
 				<h2 id="title_ocene">Ocene</h2>
 				<div id="spodnjaCrta_ocene"></div>
 				<div id="sredinski_border_ocene_left"></div>
-				<div id="sredinski_border_ocene_mid">
+				<div class="secondItem"id="sredinski_border_ocene_mid">
 					<label id="label_ocene_predmeti">Predmeti:</label>
 					<div id="spodnjaCrta_ocene"></div>
 					<div class="border_za_predmete_ocene">
@@ -587,10 +587,10 @@
 	</div>
 	
 	<!-- footer -->
-	<footer>
+	<footer class = "footer">
 		<div>
-		<div id="zgornjaCrta">
-			<center><h3 id="spodnji_bar"><a href="home_login.html">Home</a> | <a href="https://studij.fri.uni-lj.si">Studis</a> | <a href="https://www.fri.uni-lj.si/">FRI</a> | <a href="forum.html">Forum</a></h3></center>
+		<div class = "lastItem" id="zgornjaCrta">
+			<center><h3 class = "lastItem" id="spodnji_bar"><a href="home_login.html">Home</a> | <a href="https://studij.fri.uni-lj.si">Studis</a> | <a href="https://www.fri.uni-lj.si/">FRI</a></h3></center>
 		</div>
 		</div>
 	</footer>

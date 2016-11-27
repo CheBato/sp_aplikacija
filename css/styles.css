@@ -21,19 +21,22 @@
 	margin-top: 10px;
 }
 #div_za_logo{
+	
 	width:20%;
 	height: 99%;
 	float: left;
 }
 #stil_za_logo{
 	float: left;
-	margin-right: 350px;
+	margin-right: 400px;
 	margin-top: 35px;
 }
 #div_za_title{
 	float: left;
-	width: 62%;
+	width: 30%;
 	height: 99%;
+	margin-right:200px;
+	margin-left:150px;
 }
 #title{
 	margin-top: 35px;
@@ -42,11 +45,12 @@
 #div_za_prijavo{
 	
 	float: left;
-	width: 160px;
+	width: 190px;
 	height: 99%;
 	margin-left:50px;
 }
 #prijava{
+	
 	cursor: pointer;
 	float: left;
 	margin-top: 45px;
@@ -58,8 +62,9 @@
 	cursor: pointer;
 	float:left;
 	margin-top:45px;
-	width: 30px;
+	width: 68px;
 	font-size: 17px;
+	
 	
 }
 /*konec header*/
@@ -88,19 +93,31 @@
 
 /* sredinski panel*/
 #sredinski_border{
-	border-style: groove;
+	
 	width: 79%;
 	height: 600px;
 	float: left;
 	
 }
+#sredinski_border_dve{
+	
+	width: 79%;
+	height: 600px;
+	float: left;
+}
 
 #sredinski_panel_za_predmete{
-	border-style: groove;
+	
 	width: 70%;
 	height: 400px;
 	margin-top: 100px;
 	
+}
+#sredinski_panel_za_predmete_tri{
+	
+	width: 70%;
+	height: 400px;
+	margin-top: 100px;
 }
 #studij{
 	border-style: groove;
@@ -361,7 +378,7 @@
 #div_za_celo_telo_nastavitve{
 	
 	width: 100%;
-	height: 850px;
+	height: 1200px;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
@@ -380,13 +397,14 @@
 
 /*levi panel*/
 #border_left_panel_nastavitve{
+	
 	width: 15%;
-	height: 700px;
+	height: 900px;
 	float: left;
 }
 #notranji_left_panel_nastavitve{
 	margin-top:100px;
-	width: 25%;
+	width: 45px;
 	height: 300px;
 	float: left;
 }
@@ -420,9 +438,9 @@
 	color: #9ACD32;
 }
 #sredinski_border_nastavitve{
-	
+	margin-left:5px;
 	width: 84%;
-	height: 850px;
+	height: 950px;
 	float: left;
 }
 #osrednja_delitev_left{
@@ -439,8 +457,14 @@
 }
 #osrednja_delitev_right{
 	
-	width: 35%;
-	height: 330px;
+	width: 32%;
+	height: 340px;
+	float:left;
+}
+#osrednja_delitev_right2{
+	
+	width: 28%;
+	height: 340px;
 	float:left;
 }
 /*Splosno*/
@@ -618,14 +642,14 @@
 	margin-left:5px;
 	background-color: #9ACD32;
 }
-#forum_home{
+#ocene_home{
 	border-style: groove;
 	width: 234px;
 	height: 150px;
 	float:left;
 	margin-top:5px;
 	margin-left:5px;
-	background-color: #87CEFA;
+	background-color: #008B8B;
 }
 /* **Naloge** */
 #title_naloge{
@@ -1116,3 +1140,495 @@ td{
 	text-align:center;
 	border-bottom-style:groove;
 }
+#div_za_celo_telo_ocene{
+	width: 100%;
+	height: 700px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.wrapper{
+	display:flex;
+	flex-flow:row wrap;
+}
+.header, .main, .aside, .footer{
+	flex: 1 100%;
+}
+@media all and (max-width:600px){
+	.aside{flex: 1 auto;margin-right:10px;width:100px;align:center;}
+	.container{height:900px;}
+	.odkrij_tabele{
+		margin-top:10px;
+		margin-left:0;
+		width:200px;
+	}
+	#panel_za_login{
+		width:45px;
+	}
+	#notranji_left_panel_login{
+		width:45px;
+	}
+	#osrednji_skriti_border{
+		margin-left:30px;
+		width:100px;
+	}
+	#title{
+		margin-top:0px;
+	}
+	#div_za_title{
+		
+		margin-left:80px;
+		margin-right:0px;
+	}
+	#div_za_prijavo{
+		margin-left:130px;
+	}
+	
+	#notranji_left_panel{
+		
+		margin-right:0;
+		width:45px;
+		
+	}
+	#sredinski_border_ocene{
+		
+		margin-left:50px;
+		margin-right:0px;
+		width:240px;
+	
+	}
+	#spodnji_bar{
+		
+		width:250px;
+		margin-left:70px;
+	}
+	#sredinski_border_predmeti{
+		margin-left:80px;
+	}
+	#notranji_sredinski_border_predmeti{
+		
+		
+		width:300px;
+		
+	}
+	#osrednji_skriti_border{
+		
+		width:200px;
+	}
+	#panel_za_login{
+		
+		width:350px;
+		margin-right:0px;
+	}
+	
+	#osrednji_border_koledar_left{
+		
+		
+		width:0px;
+	}
+
+	
+	#div_za_celo_telo_koledar{
+		margin-top:80px;
+		
+		
+		
+	}
+	#table_koledar{
+		width:100px;
+		margin-left:0px;
+	}
+	#radio_buttons{
+		margin-left: 80px;
+		
+	}
+	
+	
+	
+	
+}
+@media all and (max-width:1250px){
+	
+	#div_za_celo_telo_nastavitve{
+		margin-top:80px;
+	}
+	#div_za_title{
+		
+		margin-left:30px;
+		margin-right:-45px;
+		width:400px;
+	}
+	#border_za_predmete_sredina{
+			
+			float:left;
+			width:500px;
+	}
+	#notranji_left_panel{
+		
+		margin-right:0;
+		width:45px;
+		
+	}
+	#notranji_sredinski_border_predmeti{
+		
+		
+		width:900px;
+		
+	}
+	#sredinski_border_predmet{
+		
+		margin-left:10px;
+		width:750px;
+		height:1500px;
+	}
+	#border_za_opis_predmeta{
+		
+		width:100%;
+		margin-left:0px;
+		height:200px;
+	}
+	#ime_predmeta{
+		margin-left:30%;
+	}
+	#uredi_obveznosti{
+		margin-left:35%;
+	}
+	#uredi_opis{
+		margin-left:35%;
+	}
+	#predavanje1{
+		
+		margin-left:65%;
+		width:250px;
+		
+	}
+	#gradivo_left_panel{
+		width:0;
+	}
+	#sredinski_border_naloge{
+		width:850px;
+		
+		margin-left:70px;
+	}
+	#notranji_sredinski_border_naloge{
+		
+		width:850px;
+		margin-left:0px;
+	}
+	#border_left_panel_naloge{
+		
+		width:60px;
+		
+	}
+	#sredinski_border_naloga{
+		width:850px;
+	}
+	#sredinski_border_koledar{
+		
+		width:750px;
+	}
+	#sredinski_panel_za_predmete{
+		width:90%;
+		
+	}
+	#sredinski_border{
+		height:650px;
+		
+	}
+	#sredinski_panel_za_predmete_tri{
+		width:100%;
+	}
+	#sredinski_border_dve{
+		width:700px;
+	}
+	#sredinski_border_nastavitve{
+		width:680px;
+	}
+}
+@media all and (max-width:850px){
+	
+	#title{
+		margin-top:0px;
+		
+	}
+	#div_za_title{
+		
+		margin-left:30px;
+		
+		width:200px;
+	}
+	#div_za_prijavo{
+		margin-left:140px;
+		margin-right:0px;
+	}
+	#title{
+		
+		margin-right:0px;
+		margin-left:0px;
+	}
+	
+	
+	.odkrij_tabele{
+		margin-top:10px;
+		margin-left:100;
+		width:200px;
+	}
+	#notranji_left_panel{
+		
+		margin-right:0;
+		width:45px;
+		order:99;
+	}
+	#border_za_predmete_sredina{
+			
+			float:left;
+			width:200px;
+	}
+	#sredinski_border_predmeti{
+		
+		margin-top:90px;
+	}
+	#border_left_panel_naloge{
+		
+		
+		width:40px;
+	}
+
+	#notranji_sredinski_border_predmeti{
+		
+		
+		width:500px;
+		
+	}
+	#border_za_smer1{
+		
+	}
+	#border_za_letnike1{
+		
+		width:55%;
+		float:left;
+		margin-left:0;
+	}
+	#border_za_letnike2{
+		
+		width:55%;
+		float:left;
+		margin-left:0;
+	}
+	#border_za_letnike3{
+		width:55%;
+		float:left;
+		margin-left:0;
+	}
+	#border_za_letnike4{
+		width:55%;
+		float:left;
+		margin-left:0;
+	}
+	#border_za_letnike5{
+		width:55%;
+		float:left;
+		margin-left:0;
+	}
+	#border_za_letnike6{
+		width:55%;
+		float:left;
+		margin-left:0;
+	}
+	#border_za_predmet{
+		
+		margin-left:0;
+	}
+	#sredinski_border_predmeti{
+		
+		margin-left:60px;
+	}
+	
+	#div_za_celo_telo_predmet{
+		
+		margin-top:90px;
+		width:500px;
+		height:1900px;
+	}
+	#sredinski_border_predmet{
+		margin-left:10px;
+		width:300px;
+		height:1900px;
+	}
+	#border_za_opis_predmeta{
+		
+		width:100%;
+		margin-left:0px;
+		height:300px;
+	}
+	#ime_predmeta{
+		margin-left:0px;
+	}
+	#uredi_obveznosti{
+		margin-left:0;
+	}
+	#uredi_opis{
+		margin-left:0;
+	}
+	#predavanje1{
+		
+		margin-left:0;
+		width:250px;
+		
+	}
+	#gradivo_left_panel{
+		width:0;
+	}
+	#sredinski_border_naloge{
+		margin-top:80px;
+		width:450px;
+		
+		margin-left:70px;
+		
+	}
+	#border_za_naloge_left{
+		width:0px;
+	}
+	#border_za_naloge_sredina{
+		
+		width:450px;
+		
+	}
+	#naloga1
+	#naloge_text{
+		font-size: 20px;
+	}
+	#notranji_sredinski_border_naloge{
+		
+		width:450px;
+		margin-left:0px;
+	}
+	#border_left_panel_naloge{
+		
+		width:60px;
+		
+	}
+	#sredinski_border_naloga{
+		margin-left:60px;
+		margin-top:80px;
+		
+		width:300px;
+		height:800px;
+		
+	}
+	#oddaja_naloge_block{
+		margin-top:10px;
+		
+		height:100px;
+		
+	}
+	#oddaja_naloge{
+		margin-left:0px;
+	}
+	#naloga{
+		float:left;
+		margin-left:90px;
+		margin-top:10px;
+		
+	}
+	#div_za_celo_telo_naloge{
+		
+			height:900px;
+	}
+	
+	#sredinski_border_koledar{
+		
+		
+		width:300px;
+		
+	}
+	#div_za_celo_telo_koledar{
+		margin-top:80px;
+		
+	}
+	#table_koledar{
+		margin-left:0px;
+	}
+	#radio_buttons{
+		margin-left: 80px;
+		
+		width:150px;
+	}
+	#sredinski_panel_za_predmete{
+		width:80%;
+		height:650px;
+	}
+	#prijava2{
+		margin-top:5px;
+	}
+	#koledar{
+		margin-left:0px;
+	}
+	#sredinski_panel_za_predmete_tri{
+		width:92%;
+		height:650px;
+	}
+	#div_za_celo_telo{
+		margin-top:80px;
+		height:900px;
+	}
+	#sredinski_border_dve{
+		width:80%;
+		height:650px;
+	}
+	#predmeti{
+		width: 200px;
+	}
+	#naloge_home{
+		margin-top:5px;
+		width: 200px;
+	}
+	#koledar_home{
+		width: 200px;
+	}
+	#profil_home{
+		width: 200px;
+		margin-left:0px;
+	}
+	#ocene_home{
+		width: 200px;
+		margin-left:0px;
+	}
+	#sredinski_border_nastavitve{
+		width:320px;
+	}
+	#panel_za_splosno{
+		
+		float:left;
+		width:150px;
+		margin-right:10px;
+	}
+	#border_left_panel_nastavitve{
+		width:10%;
+	}
+	
+	#osrednja_delitev_mid{
+		margin-left:50px;
+		float:left;
+		width:50%;
+	}
+	#osrednja_delitev_right2{
+		display:none;
+		width:20%;
+	}
+	#osrednja_delitev_right{
+		display:none;
+		width:20%;
+	}
+	#osrednja_delitev_slika_uporabnika{
+		
+		margin-left:50px;
+		width:51%;
+	}
+	#uredi_gumb{
+		margin-left:50px;
+	}
+}
+
+	
+
+

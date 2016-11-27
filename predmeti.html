@@ -11,7 +11,7 @@
 		document.getElementById(id).style.height="340px";
 		var visina = document.getElementById('div_za_celo_telo_predmeti').clientHeight;
 		
-		visina = visina+300;
+		visina = visina+100;
 		document.getElementById('div_za_celo_telo_predmeti').style.height = visina + "px";
 		document.getElementById(valueChild).setAttribute("onClick","javascript: restartLetnik(this.parentNode.id,this.id);");
 		//pokazemo predmete
@@ -50,7 +50,7 @@
 	}function restartLetnik(id,valueChild){
 		document.getElementById(id).style.height="25px";
 		var visina = document.getElementById('div_za_celo_telo_predmeti').clientHeight;
-		visina = visina-300;
+		visina = visina-100;
 		document.getElementById('div_za_celo_telo_predmeti').style.height = visina + "px";
 		document.getElementById(valueChild).setAttribute("onClick","javascript: expandLetnik(this.parentNode.id,this.id);");
 		//skrijemo predmete
@@ -224,7 +224,7 @@
 	<footer>
 		<div>
 		<div id="zgornjaCrta">
-			<center><h3 id="spodnji_bar"><a href="home_login.html">Home</a> | <a href="https://studij.fri.uni-lj.si">Studis</a> | <a href="https://www.fri.uni-lj.si/">FRI</a> | <a href="forum.html">Forum</a></h3></center>
+			<center><h3 id="spodnji_bar"><a href="home_login.html">Home</a> | <a href="https://studij.fri.uni-lj.si">Studis</a> | <a href="https://www.fri.uni-lj.si/">FRI</a></h3></center>
 		</div>
 		</div>
 	</footer>
