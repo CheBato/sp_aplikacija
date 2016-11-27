@@ -1000,6 +1000,7 @@
 	
 }
 #table_koledar{
+	
 	margin-left:120px;
 	border-color:#FF8C00;
 	width:350px;
@@ -1154,7 +1155,7 @@ td{
 	flex: 1 100%;
 }
 @media all and (max-width:600px){
-	.aside{flex: 1 auto;margin-right:10px;width:100px;align:center;}
+	.aside{flex: 1 auto;margin-right:10px;width:100px;}
 	.container{height:900px;}
 	.odkrij_tabele{
 		margin-top:10px;
@@ -1369,7 +1370,7 @@ td{
 	
 	.odkrij_tabele{
 		margin-top:10px;
-		margin-left:100;
+		margin-left:100px;
 		width:200px;
 	}
 	#notranji_left_panel{
@@ -1399,9 +1400,7 @@ td{
 		width:500px;
 		
 	}
-	#border_za_smer1{
-		
-	}
+	
 	#border_za_letnike1{
 		
 		width:55%;
@@ -1493,7 +1492,7 @@ td{
 		width:450px;
 		
 	}
-	#naloga1
+	
 	#naloge_text{
 		font-size: 20px;
 	}
