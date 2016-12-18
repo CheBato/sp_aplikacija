@@ -19,9 +19,6 @@ obrazlozitev:
 	Preko koledarja bodo lahko videli datume svojih izpitov,kolokvijev in nalog hkrati pa tudi pomembne studijske dneve, forum bo prisoten
 	pri vsakem predmetu kjer bodo imeli vsi razen gostje pravico dodati temo in komentar.
 	
-	
-
-
 ##**Ciljna publika**
 Ciljna publika projekta so študentje/dijaki/ucenci, profesorji in asistenti na fakulteti/srednji soli/osnovni soli, kar je razvidno
 po obliki in hkrati barvah spletnih strani.
@@ -35,9 +32,7 @@ in preurejanje kode glede na kateri browser se uporablja.
 Trenutno planirane tehnike so **html**,**CSS** in **javascript**. Seznam tehnik se bo tudi s časom povečal.
 
 ##**Preverjanje izgleda v drugih brskalnikih**
-Večina strani se lepo odprejo na vseh ostalih brskalnikih, vendar se najdejo napačni zamaki. Edino tezavo na katero sem naletel je pri
-ocene.html kjer zgleda pride do napake pri predmetih in tabelah, ki so collapsane notri IE mi ne pusti odpret in hkrati zapisuje A-je zraven
-medtem, ko mozzila mi dopusti "collapsat" vendar prikaze isto A-je. V chrome browserju vse spletne strani delajo normalno.
+Večina strani se lepo odprejo na vseh testiranih brskalnikih, vendar se najdejo napačni zamaki. V chrome browserju vse spletne strani delajo normalno.
 
 ##**2 zmogljivosti ali gradniki**
 Po mojem sem najvec vlozil v ocene, predmete in koledar.html kjer sem sam moral z javascriptom narest collapse in tudi menjanje mesecev.
